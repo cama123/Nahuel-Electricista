@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nahuel Quinlan — Electricidad & Refrigeración | Mendoza</title>
+
+<!-- SEO -->
+<meta name="description" content="Electricista y técnico en refrigeración en Mendoza. Instalaciones eléctricas, aires acondicionados, heladeras y cargas de gas. Urgencias 24 Hs.">
+
+<!-- Open Graph (WhatsApp, Telegram, Facebook, iMessage, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nahuel Quinlan — Electricidad & Refrigeración | Mendoza">
+<meta property="og:description" content="Electricista y técnico en refrigeración en Mendoza. Urgencias 24 Hs · Atendemos hogares y comercios.">
+<meta property="og:image" content="electri.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Nahuel Quinlan Mendoza">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nahuel Quinlan — Electricidad & Refrigeración | Mendoza">
+<meta name="twitter:description" content="Electricista y técnico en refrigeración en Mendoza. Urgencias 24 Hs.">
+<meta name="twitter:image" content="electri.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --bg: #050a12;
+    --surface: #0b1420;
+    --surface-light: #f0f6ff;
+    --card: #0f1d2e;
+    --card-light: #ffffff;
+    --border: rgba(0, 180, 255, 0.12);
+    --border-light: rgba(0, 120, 200, 0.15);
+    --accent: #00b4ff;
+    --accent2: #00e5c8;
+    --orange: #ff6b00;
+    --yellow: #ffc200;
+    --text: #e8f4ff;
+    --text-dark: #0d1f35;
+    --muted: #7a9bbf;
+    --muted-dark: #4a6a8a;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 4%; height: 68px;
+    background: rgba(5, 10, 18, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { height: 46px; width: auto; filter: drop-shadow(0 0 8px rgba(0,180,255,0.3)); }
+  .nav-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 2px; color: var(--white); line-height: 1.1; }
+  .nav-logo-text small { display: block; font-family: 'Outfit', sans-serif; font-size: 0.6rem; letter-spacing: 1.5px; color: var(--muted); font-weight: 500; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 1.4rem; list-style: none; align-items: center; }
+  .nav-links > li > a:not(.nav-btn) { color: var(--muted); text-decoration: none; font-size: 0.84rem; font-weight: 500; letter-spacing: 0.4px; transition: color 0.2s; }
+  .nav-links > li > a:not(.nav-btn):hover { color: var(--accent); }
+  .nav-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 8px 16px; border-radius: 7px;
+    font-weight: 700; font-size: 0.82rem; text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .nav-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+  .nav-btn-call {
+    background: linear-gradient(135deg, #ff8c00 0%, #ff3d00 100%);
+    color: #fff; box-shadow: 0 2px 14px rgba(255,80,0,0.35);
+  }
+  .nav-btn-wa { background: #25D366; color: #fff; box-shadow: 0 2px 14px rgba(37,211,102,0.25); }
+
+  /* ── HERO ── */
+  #inicio {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; padding: 80px 5% 60px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,180,255,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(0,229,200,0.05) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(0,180,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,180,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  }
+  .hero-content { position: relative; max-width: 820px; text-align: center; animation: fadeUp 0.9s ease both; }
+  .hero-logo { margin-bottom: 8px; }
+  .hero-logo img { height: 150px; width: auto; filter: drop-shadow(0 0 28px rgba(0,180,255,0.4)); }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,180,255,0.1); border: 1px solid rgba(0,180,255,0.25);
+    border-radius: 999px; padding: 6px 16px; font-size: 0.78rem; font-weight: 600;
+    color: var(--accent); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 18px;
+  }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 8vw, 5.5rem); line-height: 0.95; letter-spacing: 1px; color: var(--white); margin-bottom: 22px; }
+  h1 .accent { color: var(--accent); }
+  h1 .accent2 { color: var(--accent2); }
+  .hero-sub { font-size: clamp(0.95rem, 2.5vw, 1.1rem); color: var(--muted); line-height: 1.65; max-width: 600px; margin: 0 auto 38px; }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+  .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .btn-wa {
+    display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff;
+    font-weight: 700; font-size: 1rem; padding: 15px 32px; border-radius: 10px; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(37,211,102,0.25);
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.4); }
+  .btn-call {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, #ff8c00 0%, #ff3000 100%); color: #fff;
+    font-weight: 700; font-size: 1rem; padding: 15px 32px; border-radius: 10px; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(255,80,0,0.3);
+  }
+  .btn-call:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,80,0,0.45); }
+
+  .hero-stats {
+    display: flex; justify-content: center; gap: 48px; margin-top: 52px;
+    padding-top: 36px; border-top: 1px solid var(--border); flex-wrap: wrap;
+    animation: fadeUp 1.1s ease 0.2s both;
+  }
+  .stat-item { text-align: center; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; color: var(--accent); line-height: 1; display: block; }
+  .stat-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; margin-top: 4px; }
+
+  /* ── SECTION UTILS ── */
+  .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 5vw, 3rem); line-height: 1; color: var(--white); margin-bottom: 14px; }
+  .section-title.dark { color: var(--text-dark); }
+  .section-sub { color: var(--muted); font-size: 0.97rem; line-height: 1.65; max-width: 520px; }
+  .section-sub.dark { color: var(--muted-dark); }
+
+  /* ── SERVICIOS — light bg ── */
+  #servicios {
+    padding: 90px 5%;
+    background: linear-gradient(180deg, #e8f4ff 0%, #f5faff 60%, #ffffff 100%);
+  }
+  .services-header { text-align: center; margin-bottom: 52px; }
+  .services-header .section-label { color: #0080cc; }
+  .services-header .section-title { color: var(--text-dark); }
+  .services-header .section-sub { margin: 0 auto; color: var(--muted-dark); }
+
+  .services-list {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 14px; max-width: 900px; margin: 0 auto;
+  }
+  .service-item {
+    background: #fff; border: 1px solid rgba(0,120,200,0.14); border-radius: 12px;
+    padding: 20px 22px; display: flex; align-items: flex-start; gap: 16px;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .service-item::before {
+    content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, var(--accent), var(--accent2));
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .service-item:hover { border-color: rgba(0,180,255,0.4); box-shadow: 0 4px 20px rgba(0,120,200,0.1); transform: translateY(-2px); }
+  .service-item:hover::before { opacity: 1; }
+  .service-item-icon {
+    width: 40px; height: 40px; min-width: 40px;
+    background: rgba(0,180,255,0.1); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: #0090d0; font-size: 1rem;
+  }
+  .service-item h3 { font-size: 0.94rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+  .service-item p { font-size: 0.81rem; color: var(--muted-dark); line-height: 1.5; }
+
+  /* ── QUIENES — dark ── */
+  #quienes-wrap {
+    padding: 90px 5%;
+    background: var(--bg);
+  }
+  #quienes {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: center; max-width: 1100px; margin: 0 auto;
+  }
+  .about-text p { color: var(--muted); font-size: 0.96rem; line-height: 1.75; margin-bottom: 16px; }
+  .about-text p strong { color: var(--text); font-weight: 600; }
+  .about-cards { display: grid; gap: 14px; }
+  .about-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 22px; display: flex; align-items: flex-start; gap: 16px; transition: border-color 0.25s;
+  }
+  .about-card:hover { border-color: rgba(0,180,255,0.3); }
+  .about-card-icon { width: 38px; height: 38px; min-width: 38px; background: rgba(0,180,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.95rem; }
+  .about-card h4 { font-size: 0.93rem; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .about-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  /* ── COBERTURA — light bg ── */
+  #cobertura {
+    padding: 90px 5%;
+    background: linear-gradient(180deg, #ffffff 0%, #e8f4ff 50%, #daeeff 100%);
+    text-align: center;
+  }
+  #cobertura .section-label { color: #0080cc; }
+  #cobertura .section-title { color: var(--text-dark); }
+  #cobertura .section-sub { color: var(--muted-dark); margin: 0 auto; }
+  .coverage-wrapper { max-width: 960px; margin: 0 auto; }
+  .coverage-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 36px; }
+  .coverage-tag {
+    background: #fff; border: 1px solid rgba(0,120,200,0.2); border-radius: 999px;
+    padding: 10px 22px; font-size: 0.87rem; font-weight: 600; color: var(--text-dark);
+    display: flex; align-items: center; gap: 8px; transition: border-color 0.2s, background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,100,180,0.07);
+  }
+  .coverage-tag i { color: #0090d0; font-size: 0.75rem; }
+  .coverage-tag:hover { border-color: #0090d0; background: #e8f4ff; color: #005fa0; }
+
+  .map-container {
+    margin-top: 36px; border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(0,120,200,0.2); height: 340px; position: relative;
+    box-shadow: 0 4px 24px rgba(0,100,180,0.12);
+  }
+  .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+  /* ── URGENCIAS + FORM — dark ── */
+  #urgencias-form {
+    padding: 90px 5%;
+    background: var(--surface);
+  }
+  .urgencias-form-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: start; max-width: 1000px; margin: 0 auto;
+  }
+
+  /* Urgencias side */
+  .urgencias-side .section-title { color: var(--white); }
+  .urgencias-side .section-sub { color: var(--muted); max-width: 100%; margin-bottom: 28px; }
+  .urgencias-info { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+  .urgencias-info-item {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px;
+  }
+  .urgencias-info-item .u-icon {
+    width: 40px; height: 40px; min-width: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1rem;
+  }
+  .u-icon-yellow { background: rgba(255,194,0,0.12); color: var(--yellow); }
+  .u-icon-green { background: rgba(37,211,102,0.1); color: #25D366; }
+  .u-icon-orange { background: rgba(255,120,0,0.1); color: var(--orange); }
+  .urgencias-info-item strong { display: block; font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+  .urgencias-info-item span { font-size: 0.8rem; color: var(--muted); }
+
+  /* Form side */
+  .form-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 32px;
+  }
+  .form-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); margin-bottom: 6px; letter-spacing: 1px; }
+  .form-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 24px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 14px; color: var(--text); font-family: 'Outfit', sans-serif;
+    font-size: 0.93rem; outline: none; transition: border-color 0.2s, background 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--accent); background: rgba(0,180,255,0.04);
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: #3a5a7a; }
+  .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9bbf' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .form-group select option { background: #0f1d2e; color: var(--text); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .btn-form-submit {
+    width: 100%; padding: 14px; border-radius: 9px; border: none; cursor: pointer;
+    background: linear-gradient(135deg, #00c4ff 0%, #0080cc 100%);
+    color: #fff; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s; margin-top: 8px;
+    box-shadow: 0 4px 20px rgba(0,180,255,0.25);
+  }
+  .btn-form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,180,255,0.35); }
+  .form-success {
+    display: none; text-align: center; padding: 20px;
+    background: rgba(37,211,102,0.08); border: 1px solid rgba(37,211,102,0.25);
+    border-radius: 10px; margin-top: 16px;
+  }
+  .form-success i { font-size: 2rem; color: #25D366; display: block; margin-bottom: 8px; }
+  .form-success p { color: var(--text); font-size: 0.9rem; margin: 0; }
+
+  /* ── CONTACTO — light bg ── */
+  #contacto {
+    padding: 90px 5%;
+    background: linear-gradient(180deg, #daeeff 0%, #e8f4ff 50%, #f0f8ff 100%);
+    text-align: center;
+  }
+  #contacto .section-label { color: #0080cc; }
+  #contacto .section-title { color: var(--text-dark); }
+  .contact-wrapper { max-width: 600px; margin: 0 auto; }
+  .contact-sub { color: var(--muted-dark); margin: 0 auto 36px; font-size: 0.97rem; }
+  .contact-info { display: flex; flex-direction: column; gap: 14px; }
+
+  .contact-btn {
+    display: flex; align-items: center; gap: 16px;
+    padding: 18px 24px; border-radius: 12px; text-decoration: none;
+    font-size: 0.97rem; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .contact-btn:hover { transform: translateY(-2px); }
+  .contact-btn-wa {
+    background: linear-gradient(135deg, #1fbe5a, #128c3e);
+    color: #fff; box-shadow: 0 4px 20px rgba(37,211,102,0.2);
+  }
+  .contact-btn-wa:hover { box-shadow: 0 8px 28px rgba(37,211,102,0.35); }
+  .contact-btn-call {
+    background: linear-gradient(135deg, #ff8c00 0%, #ff3000 100%);
+    color: #fff; box-shadow: 0 4px 20px rgba(255,80,0,0.2);
+  }
+  .contact-btn-call:hover { box-shadow: 0 8px 28px rgba(255,80,0,0.35); }
+  .contact-btn-icon {
+    width: 44px; height: 44px; min-width: 44px; background: rgba(255,255,255,0.2);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+  .contact-btn-text strong { display: block; font-size: 1rem; margin-bottom: 1px; }
+  .contact-btn-text span { font-size: 0.78rem; opacity: 0.85; font-weight: 400; }
+
+  .contact-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+  .contact-meta-item {
+    background: #fff; border: 1px solid rgba(0,120,200,0.15); border-radius: 10px;
+    padding: 16px 18px; display: flex; align-items: center; gap: 12px;
+    box-shadow: 0 2px 8px rgba(0,100,180,0.06);
+  }
+  .contact-meta-item i { color: #0090d0; font-size: 1rem; width: 18px; text-align: center; }
+  .contact-meta-item span { font-size: 0.85rem; color: var(--text-dark); font-weight: 500; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg); border-top: 1px solid var(--border);
+    padding: 28px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  }
+  .footer-logo { display: flex; align-items: center; gap: 10px; }
+  .footer-logo img { height: 38px; width: auto; filter: drop-shadow(0 0 6px rgba(0,180,255,0.2)); }
+  .footer-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 2px; color: var(--white); }
+  .footer-logo-text span { color: var(--accent); }
+  footer p { font-size: 0.78rem; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* ── WA FLOAT ── */
+  .whatsapp-float {
+    position: fixed; bottom: 28px; right: 28px; width: 58px; height: 58px;
+    background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; color: #fff; text-decoration: none; z-index: 200;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── SEGURIDAD — dark bg ── */
+  #seguridad {
+    padding: 90px 5%;
+    background: linear-gradient(180deg, var(--bg) 0%, #060d18 100%);
+    position: relative; overflow: hidden;
+  }
+  #seguridad::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 55% 60% at 85% 50%, rgba(255,100,0,0.06) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 40% at 15% 30%, rgba(255,194,0,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .seguridad-inner { max-width: 1100px; margin: 0 auto; }
+  .seguridad-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px; }
+  .seguridad-header-text .section-label { color: var(--orange); }
+  .seguridad-header-text .section-title { color: var(--white); }
+  .seguridad-header-text .section-title span { color: var(--orange); }
+  .seguridad-header-text .section-sub { color: var(--muted); }
+  .seguridad-header-text .btn-wa { margin-top: 28px; display: inline-flex; }
+  .seguridad-badge-list { display: flex; flex-direction: column; gap: 14px; }
+  .seguridad-badge {
+    background: var(--card); border: 1px solid rgba(255,100,0,0.18); border-radius: 12px;
+    padding: 18px 20px; display: flex; align-items: center; gap: 16px;
+    transition: border-color 0.25s, transform 0.2s;
+  }
+  .seguridad-badge:hover { border-color: rgba(255,100,0,0.45); transform: translateX(4px); }
+  .seguridad-badge-icon {
+    width: 42px; height: 42px; min-width: 42px; border-radius: 10px;
+    background: rgba(255,100,0,0.12); display: flex; align-items: center;
+    justify-content: center; color: var(--orange); font-size: 1.05rem;
+  }
+  .seguridad-badge strong { display: block; font-size: 0.93rem; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+  .seguridad-badge span { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+
+  .seguridad-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  }
+  .seguridad-card {
+    background: var(--card); border: 1px solid rgba(255,100,0,0.14); border-radius: 14px;
+    padding: 26px 22px; position: relative; overflow: hidden;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  }
+  .seguridad-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--orange), var(--yellow));
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .seguridad-card:hover { border-color: rgba(255,100,0,0.4); box-shadow: 0 6px 28px rgba(255,80,0,0.1); transform: translateY(-3px); }
+  .seguridad-card:hover::before { opacity: 1; }
+  .seguridad-card-icon {
+    width: 46px; height: 46px; border-radius: 10px;
+    background: rgba(255,100,0,0.12); display: flex; align-items: center;
+    justify-content: center; color: var(--orange); font-size: 1.1rem; margin-bottom: 14px;
+  }
+  .seguridad-card h3 { font-size: 0.96rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+  .seguridad-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+
+  /* ── SEGURIDAD — alert CTA ── */
+  .seguridad-alert {
+    margin-top: 48px;
+    background: linear-gradient(135deg, rgba(255,60,0,0.12) 0%, rgba(255,140,0,0.08) 100%);
+    border: 1px solid rgba(255,80,0,0.35);
+    border-radius: 16px; padding: 32px 36px;
+    display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+    position: relative; overflow: hidden;
+  }
+  .seguridad-alert::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(255,60,0,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .seguridad-alert-icon {
+    font-size: 2.4rem; color: var(--orange);
+    animation: pulse-warn 2s ease-in-out infinite; flex-shrink: 0;
+  }
+  @keyframes pulse-warn {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.12); }
+  }
+  .seguridad-alert-content { flex: 1; min-width: 220px; }
+  .seguridad-alert-content strong { display: block; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+  .seguridad-alert-content p { font-size: 0.87rem; color: var(--muted); line-height: 1.6; margin: 0; }
+  .seguridad-alert-content p span { color: var(--orange); font-weight: 600; }
+  .seguridad-alert-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: #fff; font-weight: 700; font-size: 0.95rem;
+    padding: 14px 26px; border-radius: 10px; text-decoration: none; white-space: nowrap;
+    transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    flex-shrink: 0;
+  }
+  .seguridad-alert-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.45); }
+  @media (max-width: 768px) {
+    .seguridad-alert { flex-direction: column; align-items: flex-start; padding: 24px 20px; gap: 18px; }
+    .seguridad-alert-btn { width: 100%; justify-content: center; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+    .seguridad-grid { grid-template-columns: 1fr 1fr; }
+    .seguridad-header { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 0 4%; height: 62px; }
+    .nav-links { gap: 8px; }
+    .nav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; }
+    .nav-btn { padding: 7px 12px; font-size: 0.75rem; gap: 5px; white-space: nowrap; }
+    .nav-logo-text { font-size: 1rem; }
+    .nav-logo-text small { display: none; }
+    #quienes { grid-template-columns: 1fr; gap: 40px; }
+    .services-list { grid-template-columns: 1fr; }
+    .urgencias-form-grid { grid-template-columns: 1fr; gap: 40px; }
+    .seguridad-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-meta { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+    .hero-stats { gap: 28px; }
+    .hero-logo img { height: 110px; }
+    .hero-buttons { flex-wrap: nowrap; gap: 10px; }
+    .hero-buttons .btn-wa,
+    .hero-buttons .btn-call { padding: 13px 18px; font-size: 0.88rem; gap: 7px; white-space: nowrap; }
+  }
+  @media (max-width: 400px) {
+    .hero-buttons .btn-wa,
+    .hero-buttons .btn-call { padding: 11px 14px; font-size: 0.82rem; }
+  }
+
+  /* ── MEDIOS DE PAGO ── */
+  #pagos {
+    padding: 80px 5%;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .pagos-inner { max-width: 900px; margin: 0 auto; }
+  .pagos-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+  }
+  .pagos-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    line-height: 1; color: var(--white); margin-bottom: 12px;
+  }
+  .pagos-sub {
+    font-size: 0.95rem; color: var(--muted); margin-bottom: 48px;
+  }
+  .pagos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .pago-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 16px 26px;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  }
+  .pago-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 32px rgba(0,180,255,0.1);
+    border-color: rgba(0,180,255,0.3);
+  }
+  .pago-icon-wrap {
+    width: 56px; height: 56px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.45rem;
+  }
+  .pago-icon-wrap.blue   { background: rgba(90,120,255,0.13); color: #7090ff; }
+  .pago-icon-wrap.cyan   { background: rgba(0,180,255,0.13);  color: var(--accent); }
+  .pago-icon-wrap.green  { background: rgba(37,211,102,0.11); color: #25D366; }
+  .pago-icon-wrap.yellow { background: rgba(255,194,0,0.12);  color: var(--yellow); }
+  .pago-card-name {
+    font-weight: 700; font-size: 1.05rem; color: var(--white);
+  }
+  .pago-card-desc {
+    font-size: 0.8rem; color: var(--muted); line-height: 1.4;
+  }
+  .pagos-nota {
+    margin-top: 36px; font-size: 0.82rem; color: var(--muted);
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+  }
+  .pagos-nota i { color: var(--accent2); }
+  @media (max-width: 600px) {
+    .pagos-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <img src="electri.png" alt="Nahuel Quinlan logo">
+    <div class="nav-logo-text">
+      Nahuel Quinlan
+      <small>Electricidad & Refrigeración</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#quienes-wrap">Nosotros</a></li>
+    <li><a href="#cobertura">Cobertura</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="tel:+5492612156116" class="nav-btn nav-btn-call"><i class="fa-solid fa-phone"></i> Llamar</a></li>
+    <li><a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="nav-btn nav-btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-logo">
+      <img src="electri.png" alt="Nahuel Quinlan logo">
+    </div>
+    <div class="hero-badge">
+      <i class="fa-solid fa-bolt"></i>
+      Mendoza y Gran Mendoza · Urgencias 24 Hs
+    </div>
+    <h1>ELECTRICISTA &amp;<br><span class="accent">TÉCNICO EN</span><br><span class="accent2">REFRIGERACIÓN</span></h1>
+    <p class="hero-sub">
+      Instalaciones eléctricas, aires split, heladeras, cargas de gas y más.
+      <strong>Atención rápida y profesional.</strong> Atendemos hogares y comercios.
+    </p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="btn-wa">
+        <i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp
+      </a>
+      <a href="tel:+5492612156116" class="btn-call">
+        <i class="fa-solid fa-phone"></i> 2612 15-6116
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-num">24 Hs</span><span class="stat-label">Urgencias</span></div>
+      <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Zonas cubiertas</span></div>
+      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Garantizados</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="services-header fade-up">
+    <div class="section-label">Lo que hacemos</div>
+    <div class="section-title">NUESTROS SERVICIOS</div>
+    <p class="section-sub">Soluciones completas en electricidad domiciliaria e instalación y mantenimiento de refrigeración.</p>
+  </div>
+  <div class="services-list fade-up">
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-plug"></i></div><div><h3>Instalaciones Eléctricas</h3><p>Obras nuevas, cableado completo, distribución y puesta a tierra según normativa.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div><h3>Fallas y Cortocircuitos</h3><p>Detección y reparación rápida con respuesta inmediata a tu domicilio.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-shield-halved"></i></div><div><h3>Térmicas y Disyuntores</h3><p>Instalación y reemplazo de térmicas, diferenciales y llaves termomagnéticas.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-wind"></i></div><div><h3>Aires Acondicionados</h3><p>Instalación y reparación de split, inverter, portátiles y ventana.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-snowflake"></i></div><div><h3>Heladeras y Freezers</h3><p>Reparación de heladeras familiares y comerciales. Diagnóstico en el acto.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-gas-pump"></i></div><div><h3>Carga de Gas Refrigerante</h3><p>Recarga para todo tipo de equipos de refrigeración y climatización.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-rotate"></i></div><div><h3>Motores Trifásicos</h3><p>Revisión, diagnóstico y reparación de motores eléctricos trifásicos.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-droplet"></i></div><div><h3>Bombas y Riego</h3><p>Instalación de bombas de agua, piscinas y riego por aspersión.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-wrench"></i></div><div><h3>Mantenimiento Preventivo</h3><p>Revisión periódica para evitar fallas y prolongar la vida de los equipos.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-network-wired"></i></div><div><h3>Recableado General</h3><p>Renovación de instalaciones antiguas con materiales de primera calidad.</p></div></div>
+  </div>
+</section>
+
+
+
+<!-- MEDIOS DE PAGO -->
+<section id="pagos">
+  <div class="pagos-inner fade-up">
+    <div class="pagos-label">Sin complicaciones</div>
+    <div class="pagos-title">TODOS LOS MEDIOS DE PAGO</div>
+    <p class="pagos-sub">Elegí cómo pagar, nosotros nos adaptamos.</p>
+    <div class="pagos-grid">
+      <div class="pago-card">
+        <div class="pago-icon-wrap blue"><i class="fa-solid fa-credit-card"></i></div>
+        <span class="pago-card-name">Crédito</span>
+        <span class="pago-card-desc">Todas las tarjetas</span>
+      </div>
+      <div class="pago-card">
+        <div class="pago-icon-wrap cyan"><i class="fa-solid fa-credit-card"></i></div>
+        <span class="pago-card-name">Débito</span>
+        <span class="pago-card-desc">Todas las tarjetas</span>
+      </div>
+      <div class="pago-card">
+        <div class="pago-icon-wrap green"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <span class="pago-card-name">Transferencia</span>
+        <span class="pago-card-desc">CBU · Alias · QR</span>
+      </div>
+      <div class="pago-card">
+        <div class="pago-icon-wrap yellow"><i class="fa-solid fa-money-bill-wave"></i></div>
+        <span class="pago-card-name">Efectivo</span>
+        <span class="pago-card-desc">Sin recargo</span>
+      </div>
+    </div>
+    <p class="pagos-nota">
+      <i class="fa-solid fa-circle-check"></i>
+      El precio acordado es el precio final, sin sorpresas.
+    </p>
+  </div>
+</section>
+
+<!-- QUIENES SOMOS -->
+<div id="quienes-wrap">
+  <div id="quienes">
+    <div class="about-text fade-up">
+      <div class="section-label">Quiénes somos</div>
+      <div class="section-title">NAHUEL QUINLAN,<br>A TU SERVICIO</div>
+      <p>Soy <strong>Nahuel Quinlan</strong>, técnico en electricidad y refrigeración con base en Mendoza. Ofrezco servicios profesionales y completos tanto en el área eléctrica domiciliaria como en instalación y mantenimiento de sistemas de refrigeración.</p>
+      <p>Cuento con amplia experiencia y conocimientos actualizados para brindarte soluciones <strong>eficientes, seguras y duraderas</strong>, adaptadas a hogares, pequeños comercios y todo tipo de obras.</p>
+      <p>Materiales de calidad y asesoramiento técnico personalizado en cada trabajo.</p>
+    </div>
+    <div class="about-cards fade-up">
+      <div class="about-card"><div class="about-card-icon"><i class="fa-solid fa-medal"></i></div><div><h4>Trabajos garantizados</h4><p>Calidad en materiales y mano de obra con respaldo profesional.</p></div></div>
+      <div class="about-card"><div class="about-card-icon"><i class="fa-solid fa-house"></i></div><div><h4>Hogares y comercios</h4><p>Adaptamos el servicio a cada tipo de cliente y necesidad.</p></div></div>
+      <div class="about-card"><div class="about-card-icon"><i class="fa-solid fa-tag"></i></div><div><h4>Precios accesibles</h4><p>Servicio profesional a precios justos y competitivos.</p></div></div>
+      <div class="about-card"><div class="about-card-icon"><i class="fa-solid fa-clock"></i></div><div><h4>Urgencias 24 Hs</h4><p>Disponible todos los días para emergencias eléctricas y de refrigeración.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- COBERTURA -->
+<section id="cobertura">
+  <div class="coverage-wrapper fade-up">
+    <div class="section-label">Zona de trabajo</div>
+    <div class="section-title">CUBRIMOS TODO<br>GRAN MENDOZA</div>
+    <p class="section-sub dark">Llegamos a toda la ciudad y alrededores para atender tu urgencia o consulta.</p>
+    <div class="coverage-grid">
+      <span class="coverage-tag"><i class="fa-solid fa-location-dot"></i> Ciudad de Mendoza</span>
+      <span class="coverage-tag"><i class="fa-solid fa-location-dot"></i> Godoy Cruz</span>
+      <span class="coverage-tag"><i class="fa-solid fa-location-dot"></i> Guaymallén</span>
+      <span class="coverage-tag"><i class="fa-solid fa-location-dot"></i> Las Heras</span>
+      <span class="coverage-tag"><i class="fa-solid fa-location-dot"></i> Maipú</span>
+      <span class="coverage-tag"><i class="fa-solid fa-location-dot"></i> Luján de Cuyo</span>
+      <span class="coverage-tag"><i class="fa-solid fa-location-dot"></i> Alrededores</span>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432894.8!2d-69.1!3d-32.89!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09dc79ba7b75%3A0x4a09fd8b25bdf5c4!2sMendoza%2C%20Argentina!5e0!3m2!1ses!2sar!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCIAS + FORMULARIO -->
+<section id="urgencias-form">
+  <div class="urgencias-form-grid fade-up">
+    <div class="urgencias-side">
+      <div class="section-label">Atención inmediata</div>
+      <div class="section-title">URGENCIAS<br>LAS 24 HORAS</div>
+      <p class="section-sub">Respondemos emergencias eléctricas y de refrigeración en cualquier horario, todos los días del año.</p>
+      <div class="urgencias-info">
+        <div class="urgencias-info-item">
+          <div class="u-icon u-icon-yellow"><i class="fa-solid fa-bolt"></i></div>
+          <div><strong>Emergencias eléctricas</strong><span>Cortocircuitos, fallas, sin luz — respondemos al instante</span></div>
+        </div>
+        <div class="urgencias-info-item">
+          <div class="u-icon u-icon-green"><i class="fa-solid fa-snowflake"></i></div>
+          <div><strong>Urgencias de refrigeración</strong><span>Heladeras y aires que fallaron — solucionamos el mismo día</span></div>
+        </div>
+        <div class="urgencias-info-item">
+          <div class="u-icon u-icon-orange"><i class="fa-solid fa-phone"></i></div>
+          <div><strong>2612 15-6116</strong><span>Disponibles las 24 horas · 7 días a la semana</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5492612156116?text=Tengo%20una%20urgencia" target="_blank" class="btn-wa" style="display:inline-flex;">
+        <i class="fa-brands fa-whatsapp"></i> Contactar por urgencia
+      </a>
+    </div>
+    <div class="form-card fade-up">
+      <h3>PEDÍ TU PRESUPUESTO</h3>
+      <p>Completá el formulario y te contactamos a la brevedad.</p>
+      <form id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="261 XXX XXXX" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Tipo de servicio</label>
+          <select required>
+            <option value="" disabled selected>Seleccioná un servicio</option>
+            <option>Instalación eléctrica</option>
+            <option>Reparación eléctrica / urgencia</option>
+            <option>Aire acondicionado (instalación)</option>
+            <option>Aire acondicionado (reparación)</option>
+            <option>Heladera / Freezer</option>
+            <option>Carga de gas refrigerante</option>
+            <option>Motor trifásico</option>
+            <option>Bombas / Riego</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensaje (opcional)</label>
+          <textarea placeholder="Contanos brevemente qué necesitás..."></textarea>
+        </div>
+        <button type="submit" class="btn-form-submit">
+          <i class="fa-solid fa-paper-plane"></i> Enviar consulta
+        </button>
+      </form>
+      <div class="form-success" id="form-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>¡Consulta enviada! Te contactamos a la brevedad por WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contact-wrapper fade-up">
+    <div class="section-label">Contacto directo</div>
+    <div class="section-title dark">¿NECESITÁS<br>AYUDA?</div>
+    <p class="contact-sub">Escribinos o llamanos. Respondemos rápido y coordinamos una visita.</p>
+    <div class="contact-info">
+      <a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="contact-btn contact-btn-wa">
+        <div class="contact-btn-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="contact-btn-text">
+          <strong>Escribir por WhatsApp</strong>
+          <span>2612 15-6116 · Respuesta inmediata</span>
+        </div>
+      </a>
+      <a href="tel:+5492612156116" class="contact-btn contact-btn-call">
+        <div class="contact-btn-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="contact-btn-text">
+          <strong>Llamar ahora</strong>
+          <span>2612 15-6116 · Urgencias 24 Hs</span>
+        </div>
+      </a>
+      <div class="contact-meta">
+        <div class="contact-meta-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Videla Castillo 2223, Mendoza</span>
+        </div>
+        <div class="contact-meta-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Urgencias 24 Hs · Todos los días</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+  <img src="electri.png" alt="Nahuel Quinlan logo">
+</div>  <div class="footer-logo-text">NAHUEL <span>QUINLAN</span></div>
+  </div>
+  <p>Electricidad &amp; Refrigeración · Mendoza</p>
+  <p>Desarrollado por <a href="#">Webster</a></p>
+</footer>
+
+<a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="whatsapp-float">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+  // Scroll reveal
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => obs.observe(el));
+
+  // Form submit -> redirect to WhatsApp
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const nombre = form.querySelector('input[type="text"]').value;
+    const tel = form.querySelector('input[type="tel"]').value;
+    const servicio = form.querySelector('select').value;
+    const msg = form.querySelector('textarea').value;
+    const texto = encodeURIComponent(
+      `Hola! Soy ${nombre} (${tel}). Consulto por: ${servicio}.${msg ? ' ' + msg : ''}`
+    );
+    document.getElementById('form-success').style.display = 'block';
+    form.style.display = 'none';
+    setTimeout(() => {
+      window.open(`https://wa.me/5492612156116?text=${texto}`, '_blank');
+    }, 800);
+  }
+</script>
+</body>
+</html>
