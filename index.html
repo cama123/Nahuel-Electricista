@@ -146,7 +146,74 @@
   .section-sub.dark { color: var(--muted-dark); }
 
   /* ── SERVICIOS — light bg ── */
-  #servicios {
+  /* URGENCIA DESTACADA */
+  .urgencia-destacada {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #1a0a00 0%, #0f1d2e 60%);
+    border: 2px solid rgba(255, 100, 0, 0.6);
+    border-radius: 18px;
+    padding: 32px 36px;
+    margin: 0 auto 40px;
+    max-width: 900px;
+    display: flex; align-items: center; justify-content: space-between; gap: 28px;
+    box-shadow: 0 0 40px rgba(255,80,0,0.18), 0 4px 24px rgba(0,0,0,0.4);
+  }
+  .urgencia-destacada::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,80,0,0.07), transparent 60%);
+    pointer-events: none;
+  }
+  .urgencia-destacada-pulse {
+    position: absolute; top: 18px; right: 20px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: #ff5500;
+    box-shadow: 0 0 0 0 rgba(255,85,0,0.6);
+    animation: pulse-ring 1.8s ease-out infinite;
+  }
+  @keyframes pulse-ring {
+    0%   { box-shadow: 0 0 0 0 rgba(255,85,0,0.7); }
+    70%  { box-shadow: 0 0 0 12px rgba(255,85,0,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,85,0,0); }
+  }
+  .urgencia-destacada-left { flex: 1; }
+  .urgencia-destacada-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,80,0,0.18); border: 1px solid rgba(255,80,0,0.4);
+    color: #ff7733; font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .urgencia-destacada-badge i { font-size: 0.6rem; color: #ff5500; animation: blink 1.2s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .urgencia-destacada-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem; letter-spacing: 2px;
+    color: #fff;
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 10px;
+  }
+  .urgencia-destacada-title i { color: #ff6600; font-size: 1.8rem; }
+  .urgencia-destacada-left p {
+    color: var(--muted); font-size: 0.9rem; line-height: 1.6; max-width: 480px;
+  }
+  .urgencia-destacada-btn {
+    display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0;
+    background: #25D366; color: #fff; font-weight: 700; font-size: 0.95rem;
+    padding: 16px 28px; border-radius: 12px; text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+  }
+  .urgencia-destacada-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.45); }
+  @media (max-width: 640px) {
+    .urgencia-destacada { flex-direction: column; padding: 24px 20px; text-align: center; }
+    .urgencia-destacada-title { font-size: 1.7rem; justify-content: center; }
+    .urgencia-destacada-badge { font-size: 0.65rem; }
+    .urgencia-destacada-left p { max-width: 100%; }
+    .urgencia-destacada-btn { width: 100%; justify-content: center; }
+  }
+
+
     padding: 90px 5%;
     background: linear-gradient(180deg, #e8f4ff 0%, #f5faff 60%, #ffffff 100%);
   }
@@ -616,19 +683,29 @@
   <div class="services-header fade-up">
     <div class="section-label">Lo que hacemos</div>
     <div class="section-title">NUESTROS SERVICIOS</div>
-    <p class="section-sub">Soluciones completas en electricidad domiciliaria e instalación y mantenimiento de refrigeración.</p>
+    <p class="section-sub">Electricidad domiciliaria, refrigeración y seguridad. Trabajo garantizado en hogares y comercios de Mendoza.</p>
   </div>
+
+  <!-- URGENCIAS ELÉCTRICAS — CARD DESTACADA -->
+  <div class="urgencia-destacada fade-up">
+    <div class="urgencia-destacada-pulse"></div>
+    <div class="urgencia-destacada-left">
+      <div class="urgencia-destacada-badge"><i class="fa-solid fa-circle-dot"></i> DISPONIBLE AHORA · 24 HS</div>
+      <div class="urgencia-destacada-title"><i class="fa-solid fa-bolt"></i> URGENCIAS ELÉCTRICAS</div>
+      <p>Cortocircuitos, disyuntores saltados, fallas de luz, quema de cables. Atención el mismo día — llegamos rápido a tu domicilio.</p>
+    </div>
+    <a href="https://wa.me/5492612156116?text=Tengo%20una%20urgencia%20el%C3%A9ctrica" target="_blank" class="urgencia-destacada-btn">
+      <i class="fa-brands fa-whatsapp"></i> Llamar por urgencia
+    </a>
+  </div>
+
+  <!-- GRID DE SERVICIOS -->
   <div class="services-list fade-up">
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-plug"></i></div><div><h3>Instalaciones Eléctricas</h3><p>Obras nuevas, cableado completo, distribución y puesta a tierra según normativa.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div><h3>Fallas y Cortocircuitos</h3><p>Detección y reparación rápida con respuesta inmediata a tu domicilio.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-shield-halved"></i></div><div><h3>Térmicas y Disyuntores</h3><p>Instalación y reemplazo de térmicas, diferenciales y llaves termomagnéticas.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-wind"></i></div><div><h3>Aires Acondicionados</h3><p>Instalación y reparación de split, inverter, portátiles y ventana.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-snowflake"></i></div><div><h3>Heladeras y Freezers</h3><p>Reparación de heladeras familiares y comerciales. Diagnóstico en el acto.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-gas-pump"></i></div><div><h3>Carga de Gas Refrigerante</h3><p>Recarga para todo tipo de equipos de refrigeración y climatización.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-rotate"></i></div><div><h3>Motores Trifásicos</h3><p>Revisión, diagnóstico y reparación de motores eléctricos trifásicos.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-droplet"></i></div><div><h3>Bombas y Riego</h3><p>Instalación de bombas de agua, piscinas y riego por aspersión.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-wrench"></i></div><div><h3>Mantenimiento Preventivo</h3><p>Revisión periódica para evitar fallas y prolongar la vida de los equipos.</p></div></div>
-    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-network-wired"></i></div><div><h3>Recableado General</h3><p>Renovación de instalaciones antiguas con materiales de primera calidad.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-snowflake"></i></div><div><h3>Limpieza y mantenimiento de aire acondicionado</h3><p>Limpieza profunda de filtros y evaporador, carga de gas y revisión completa del equipo para que rinda al máximo.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-temperature-low"></i></div><div><h3>Heladeras — todas las marcas</h3><p>Reparación de heladeras familiares y comerciales de todas las marcas. Diagnóstico en el lugar, repuestos y garantía.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-plug"></i></div><div><h3>Instalaciones y modificaciones eléctricas domiciliarias</h3><p>Obras nuevas, ampliaciones, cambio de térmicas, puesta a tierra y recableado de instalaciones antiguas.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-fan"></i></div><div><h3>Instalación de ventiladores</h3><p>Ventiladores de techo, pared y extractor. Instalación prolija con el cableado correspondiente.</p></div></div>
+    <div class="service-item"><div class="service-item-icon"><i class="fa-solid fa-video"></i></div><div><h3>Instalación de cámaras monitoreadas con celular</h3><p>Cámaras IP con visión nocturna y acceso remoto desde el teléfono. Protegé tu hogar o negocio las 24 hs.</p></div></div>
   </div>
 </section>
 
@@ -752,14 +829,12 @@
           <label>Tipo de servicio</label>
           <select required>
             <option value="" disabled selected>Seleccioná un servicio</option>
-            <option>Instalación eléctrica</option>
-            <option>Reparación eléctrica / urgencia</option>
-            <option>Aire acondicionado (instalación)</option>
-            <option>Aire acondicionado (reparación)</option>
-            <option>Heladera / Freezer</option>
-            <option>Carga de gas refrigerante</option>
-            <option>Motor trifásico</option>
-            <option>Bombas / Riego</option>
+            <option>Urgencia eléctrica</option>
+            <option>Limpieza y mantenimiento de aire acondicionado</option>
+            <option>Reparación de heladera</option>
+            <option>Instalación / modificación eléctrica domiciliaria</option>
+            <option>Instalación de ventiladores</option>
+            <option>Instalación de cámaras</option>
             <option>Otro</option>
           </select>
         </div>
