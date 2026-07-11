@@ -640,8 +640,8 @@
     <li><a href="#quienes-wrap">Nosotros</a></li>
     <li><a href="#cobertura">Cobertura</a></li>
     <li><a href="#contacto">Contacto</a></li>
-    <li><a href="tel:+5492612156116" class="nav-btn nav-btn-call"><i class="fa-solid fa-phone"></i> Llamar</a></li>
-    <li><a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="nav-btn nav-btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+    <li><a data-track="llamada" href="tel:+5492612156116" class="nav-btn nav-btn-call"><i class="fa-solid fa-phone"></i> Llamar</a></li>
+    <li><a data-track="whatsapp" href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="nav-btn nav-btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
   </ul>
 </nav>
 
@@ -663,10 +663,10 @@
       <strong>Atención rápida y profesional.</strong> Atendemos hogares y comercios.
     </p>
     <div class="hero-buttons">
-      <a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="btn-wa">
+      <a data-track="whatsapp" href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="btn-wa">
         <i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp
       </a>
-      <a href="tel:+5492612156116" class="btn-call">
+      <a data-track="llamada" href="tel:+5492612156116" class="btn-call">
         <i class="fa-solid fa-phone"></i> 2612 15-6116
       </a>
     </div>
@@ -694,7 +694,7 @@
       <div class="urgencia-destacada-title"><i class="fa-solid fa-bolt"></i> URGENCIAS ELÉCTRICAS</div>
       <p>Cortocircuitos, disyuntores saltados, fallas de luz, quema de cables. Atención el mismo día — llegamos rápido a tu domicilio.</p>
     </div>
-    <a href="https://wa.me/5492612156116?text=Tengo%20una%20urgencia%20el%C3%A9ctrica" target="_blank" class="urgencia-destacada-btn">
+    <a data-track="whatsapp" href="https://wa.me/5492612156116?text=Tengo%20una%20urgencia%20el%C3%A9ctrica" target="_blank" class="urgencia-destacada-btn">
       <i class="fa-brands fa-whatsapp"></i> Llamar por urgencia
     </a>
   </div>
@@ -816,7 +816,7 @@
           <div><strong>2612 15-6116</strong><span>Disponibles las 24 horas · 7 días a la semana</span></div>
         </div>
       </div>
-      <a href="https://wa.me/5492612156116?text=Tengo%20una%20urgencia" target="_blank" class="btn-wa" style="display:inline-flex;">
+      <a data-track="whatsapp" href="https://wa.me/5492612156116?text=Tengo%20una%20urgencia" target="_blank" class="btn-wa" style="display:inline-flex;">
         <i class="fa-brands fa-whatsapp"></i> Contactar por urgencia
       </a>
     </div>
@@ -879,14 +879,14 @@
     <div class="section-title dark">¿NECESITÁS<br>AYUDA?</div>
     <p class="contact-sub">Escribinos o llamanos. Respondemos rápido y coordinamos una visita.</p>
     <div class="contact-info">
-      <a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="contact-btn contact-btn-wa">
+      <a data-track="whatsapp" href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="contact-btn contact-btn-wa">
         <div class="contact-btn-icon"><i class="fa-brands fa-whatsapp"></i></div>
         <div class="contact-btn-text">
           <strong>Escribir por WhatsApp</strong>
           <span>2612 15-6116 · Respuesta inmediata</span>
         </div>
       </a>
-      <a href="tel:+5492612156116" class="contact-btn contact-btn-call">
+      <a data-track="llamada" href="tel:+5492612156116" class="contact-btn contact-btn-call">
         <div class="contact-btn-icon"><i class="fa-solid fa-phone"></i></div>
         <div class="contact-btn-text">
           <strong>Llamar ahora</strong>
@@ -917,7 +917,7 @@
   <p>Desarrollado por <a href="#">Webster</a></p>
 </footer>
 
-<a href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="whatsapp-float">
+<a data-track="whatsapp" href="https://wa.me/5492612156116?text=Hola,%20necesito%20un%20presupuesto" target="_blank" class="whatsapp-float">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -934,7 +934,7 @@
   }, { threshold: 0.1 });
   fadeEls.forEach(el => obs.observe(el));
 
-  // Form submit -> redirect to WhatsApp
+  // Form submit -> registra la conversión y redirige a WhatsApp
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
@@ -945,6 +945,12 @@
     const texto = encodeURIComponent(
       `Hola! Soy ${nombre} (${tel}). Consulto por: ${servicio}.${msg ? ' ' + msg : ''}`
     );
+
+    // Tracking: guarda el lead en Supabase y notifica a Telegram
+    if (window.WebsterTrack) {
+      WebsterTrack.send('formulario', { nombre, telefono: tel, servicio, mensaje: msg });
+    }
+
     document.getElementById('form-success').style.display = 'block';
     form.style.display = 'none';
     setTimeout(() => {
@@ -952,5 +958,14 @@
     }, 800);
   }
 </script>
+
+<!-- Webster Tracking System: conversiones a Supabase + Telegram -->
+<script>
+  window.WEBSTER_TRACK_CONFIG = {
+    landingId: 'nahuel-quinlan',
+    apiUrl: 'https://webster-tracking-system.vercel.app/api/track'
+  };
+</script>
+<script src="https://webster-tracking-system.vercel.app/webster-track.js"></script>
 </body>
 </html>
